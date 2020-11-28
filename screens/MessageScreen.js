@@ -13,11 +13,21 @@ const styles = StyleSheet.create({
   },
   inbox: {
     width:"100%",
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderColor: "black",
+    borderBottomWidth: 0,
     marginLeft:0,
     marginRight:0,
-    marginTop:5,
+    marginTop:10,
+    marginBottom:10
+  },
+  header: {
+    marginTop: 40,
+    alignSelf:"center",
+  },
+  icon: {
+    height: 20,
+    width: 20
   }
 });
 
@@ -77,13 +87,20 @@ class MessageScreen extends Component{
       }
     ];
 
-    return <View style={styles.inbox}>
+    return (
+      <View>
+      <View style={styles.header}>
+        <Text style={{alignSelf:'center',fontSize:18,fontWeight:'bold'}}>
+          Messages
+        </Text>
+      </View>
+     <View style={styles.inbox}>
       {messages.map((message,i)=> {
         return <TouchableHighlight onPress={() => this.props.navigation.navigate("LoginMen")}>
           <PrintMessages {...message}/>
           </TouchableHighlight>
       })}
-    </View>
+    </View></View>)
   };
 }
 export default MessageScreen;

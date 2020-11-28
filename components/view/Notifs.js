@@ -1,34 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import {View, StyleSheet, Image, Text,TouchableHighlight} from "react-native"
 
-const Message = props => {
+const Notification = props => {
     console.log(JSON.stringify(props));
     return (
-      <View style ={styles.message}>
-          <Image style={styles.image} source={{uri:'https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj'}}/>
-          <Text style={styles.name}>{props.fromUser}{"\n"} 
-            <Text style={styles.text}>{props.message}
-            </Text>  
-          </Text> 
+      <View style ={styles.notification}>
+          <Image style = {styles.icon} source={require('../../assets/pokeball.png')}/> 
+          <Text style={styles.notif}>{props.message}</Text> 
           <Text style={styles.date}>{props.dateTime}</Text>
       </View>
     );
   };
 
   const styles = StyleSheet.create({
-    message:{
+    notification:{
       width:"100%",
       borderWidth:1,
       borderColor: "black",
       flexDirection:'row',
       marginTop:15,
-      padding:10
+      padding:10,
     },
-    name:{
-      fontSize: 20,
-    },
-    text:{
+    notif:{
       fontSize:13,
+      position:'absolute',
+      top:"50%",
+      left: 60
     },
     date:{
       fontSize: 12,
@@ -37,10 +34,10 @@ const Message = props => {
       left:275,
       top:"50%"
     },
-    image:{
+    icon:{
       height:40,
       width:40,
       flexWrap:'wrap'
     }
   })
-  export default Message;
+  export default Notification;
