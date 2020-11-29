@@ -13,6 +13,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import StarRating from "../components/StarRating";
+import Searchbar from "../components/Searchbar";
 import FormInput from "../components/FormInput";
 
 export default class HomeScreen extends Component {
@@ -43,6 +44,7 @@ export default class HomeScreen extends Component {
           >
             Mentors For You
           </Text>
+          <Searchbar placeholderText ="Search..."/>
         </View>
         <Modal
           transparent={true}
