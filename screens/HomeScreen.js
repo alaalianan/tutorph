@@ -11,6 +11,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import StarRating from "../components/StarRating";
+import Searchbar from "../components/Searchbar";
 
 export default class HomeScreen extends React.PureComponent {
   static navigationOptions = {
@@ -31,6 +32,9 @@ export default class HomeScreen extends React.PureComponent {
           >
             Mentors For You
           </Text>
+        </View>
+        <View style={styles.search}>
+          <Searchbar placeholderText="Search..." secureTextEntry={false}/>
         </View>
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
@@ -116,4 +120,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#444",
   },
+  search: {
+    width:"100%"
+  }
 });

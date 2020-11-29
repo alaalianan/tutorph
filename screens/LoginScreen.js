@@ -32,7 +32,7 @@ const LoginScreen = ({ navigation }) => {
         <Text style={styles.panelButtonTitle}>Log In As Learner</Text>
       </TouchableOpacity>
       <Text style={{ color: "black" }}>Don't have an account yet?</Text>
-      <TouchableHighlight onPress={() => this.props.navigation.navigate("Signup")}>
+      <TouchableHighlight onPress={() => navigation.navigate("Signup")}>
         <Text style={{ color: "blue" }}>Sign up</Text>
       </TouchableHighlight>
     </View>

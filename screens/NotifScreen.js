@@ -72,7 +72,7 @@ class NotificationScreen extends Component{
     <View style={styles.feed}>
       {notifs.map((notif,i)=> {
         return <TouchableHighlight onPress={() => this.props.navigation.navigate("LoginMen")}>
-          <PrintNotifications {...notif}/>
+          <PrintNotifications key = {notif} {...notif}/>
           </TouchableHighlight>
       })}
     </View></View>)
