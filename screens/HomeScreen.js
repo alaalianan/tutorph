@@ -13,25 +13,9 @@ import {
 import StarRating from "../components/StarRating";
 
 export default class HomeScreen extends React.PureComponent {
-  static navigationOptions = {
-    header: null,
-  };
-
   render() {
     return (
       <SafeAreaView>
-        <View style={styles.cardsWrapper}>
-          <Text
-            style={{
-              alignSelf: "center",
-              fontSize: 18,
-              fontWeight: "bold",
-              color: "#333",
-            }}
-          >
-            Mentors For You
-          </Text>
-        </View>
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
