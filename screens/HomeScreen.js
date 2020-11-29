@@ -14,10 +14,6 @@ import StarRating from "../components/StarRating";
 import Searchbar from "../components/Searchbar";
 
 export default class HomeScreen extends React.PureComponent {
-  static navigationOptions = {
-    header: null,
-  };
-
   render() {
     return (
       <SafeAreaView>

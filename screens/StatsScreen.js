@@ -16,6 +16,7 @@ import {
 export default class StatsScreen extends React.Component {
   render (){return (
     <SafeAreaView>
+      <View style={styles.container}>
     <View style={styles.card}>
     <View style={styles.cardInfo}>
       <Text style={styles.cardTitle}>Available</Text>
@@ -28,6 +29,7 @@ export default class StatsScreen extends React.Component {
       <Text style={styles.cardDetails}>200PHP</Text>
     </View>
   </View>
+  </View>
 </SafeAreaView>
   )
 };
@@ -37,14 +39,7 @@ export default class StatsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center", alignItems:'center', alignSelf: 'stretch',
   },
   cardsWrapper: {
     marginTop: 20,

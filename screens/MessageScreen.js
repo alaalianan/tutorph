@@ -97,7 +97,7 @@ class MessageScreen extends Component{
      <View style={styles.inbox}>
       {messages.map((message,i)=> {
         return <TouchableHighlight onPress={() => this.props.navigation.navigate("LoginMen")}>
-          <PrintMessages key = {message} {...message}/>
+          <PrintMessages {...message}/>
           </TouchableHighlight>
       })}
     </View></View>)
