@@ -32,20 +32,17 @@ export default class HomeScreen extends Component {
   render() {
     const { modalVisible } = this.state;
     return (
-      <View>
-        <View style={styles.cardsWrapper}>
-          <Text
-            style={{
-              alignSelf: "center",
-              fontSize: 18,
-              fontWeight: "bold",
-              color: "#333",
-            }}
-          >
-            Mentors For You
-          </Text>
+      <SafeAreaView>
+      <View style={ {
+    marginTop: 40,
+    alignSelf:"center",
+  }}>
+        <Text style={{alignSelf:'center',fontSize:18,fontWeight:'bold'}}>
+          Home
+        </Text>
           <Searchbar placeholderText ="Search..."/>
-        </View>
+      </View>
+      <View>
         <Modal
           transparent={true}
           visible={modalVisible}
@@ -239,6 +236,7 @@ export default class HomeScreen extends Component {
           </View>
         </TouchableHighlight>
       </View>
+      </SafeAreaView>
     );
   }
 }
@@ -280,6 +278,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderBottomRightRadius: 0,
     borderTopRightRadius: 0,
+  },
+  header: {
+    marginTop: 40,
+    alignSelf:"center",
   },
   cardInfo: {
     flex: 2,

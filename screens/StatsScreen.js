@@ -16,6 +16,14 @@ import {
 export default class StatsScreen extends React.Component {
   render (){return (
     <SafeAreaView>
+      <View style={ {
+    marginTop: 40,
+    alignSelf:"center",
+  }}>
+        <Text style={{alignSelf:'center',fontSize:18,fontWeight:'bold'}}>
+          Stats
+        </Text>
+      </View>
       <View style={styles.container}>
     <View style={styles.card}>
     <View style={styles.cardInfo}>

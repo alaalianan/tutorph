@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   inbox: {
     width:"100%",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "black",
     borderBottomWidth: 0,
     marginLeft:0,

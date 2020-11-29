@@ -20,6 +20,14 @@ export default class ProfileScreen extends React.Component {
     return (
         <SafeAreaView>
           <ScrollView>
+          <View style={ {
+    marginTop: 40,
+    alignSelf:"center",
+  }}>
+        <Text style={{alignSelf:'center',fontSize:18,fontWeight:'bold'}}>
+          Profile
+        </Text>
+      </View>
           <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
