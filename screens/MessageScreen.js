@@ -1,6 +1,6 @@
 import React ,{ Component } from "react";
 import PrintMessages  from "../components/view/Message"
-import {View,Text,TouchableOpacity,Image,Platform,StyleSheet,TouchableHighlight} from "react-native";
+import {View,Text,TouchableOpacity,Image,Platform,StyleSheet,TouchableHighlight, ScrollView} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -84,11 +84,39 @@ class MessageScreen extends Component{
         message: "can u pull the lane plz",
         dateTime: "Nov. 28, 2020",
         dp: "https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj"
-      }
+      },
+      {
+        toUser: "MattDu",
+        fromUser: "Kappachino",
+        message: "can u pull the lane plz",
+        dateTime: "Nov. 28, 2020",
+        dp: "https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj"
+      },
+      {
+        toUser: "MattDu",
+        fromUser: "Kappachino",
+        message: "can u pull the lane plz",
+        dateTime: "Nov. 28, 2020",
+        dp: "https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj"
+      },
+      {
+        toUser: "MattDu",
+        fromUser: "Kappachino",
+        message: "can u pull the lane plz",
+        dateTime: "Nov. 28, 2020",
+        dp: "https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj"
+      },
+      {
+        toUser: "MattDu",
+        fromUser: "Kappachino",
+        message: "can u pull the lane plz",
+        dateTime: "Nov. 28, 2020",
+        dp: "https://yt3.ggpht.com/ytc/AAUvwng2_yj4qwaRuydTk7m6Bhdl7_moj_LZZRI9ekPvLA=s900-c-k-c0x00ffffff-no-rj"
+      },
     ];
 
     return (
-      <View>
+      <ScrollView>
       <View style={styles.header}>
         <Text style={{alignSelf:'center',fontSize:18,fontWeight:'bold'}}>
           Messages
@@ -100,7 +128,7 @@ class MessageScreen extends Component{
           <PrintMessages {...message}/>
           </TouchableHighlight>
       })}
-    </View></View>)
+    </View></ScrollView>)
   };
 }
 export default MessageScreen;
