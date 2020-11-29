@@ -3,11 +3,13 @@ import { Cards } from "./../components/Cards.js";
 import StarRating from "../components/StarRating";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/Ionicons";
+import { windowHeight, windowWidth } from "../utils/Dimentions";
 import {
   View,
   Text,
   TouchableOpacity,
   Image,
+  ScrollView,
   Platform,
   StyleSheet,
   SafeAreaView,
@@ -17,6 +19,7 @@ export default class ProfileScreen extends React.Component {
   render(){ 
     return (
         <SafeAreaView>
+          <ScrollView>
           <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
@@ -32,19 +35,14 @@ export default class ProfileScreen extends React.Component {
             <Text style={{ fontSize: 12, lineHeight: 22 }}> General Rate: 500PHP</Text>
           </View>
         </View>
-        <View style={styles.card}>
+        <View style={styles.card2}>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Master English Teacher</Text>
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardText}>
-              My name is Jose and I like Sun Shiny Days and Rainbows. A productivity nerd. Tech Junkie. People Lover. I like copy pasting people’s codes from Stack Overflow
-            </Text>
+            <Text style={styles.cardText}>My name is Jose and I like Sun Shiny Days and Rainbows.</Text>
+               
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Education</Text>
-          </View>
-          <View style={styles.cardInfo}>
           <Text style={styles.cardHeader}>
             Ateneo de Manila University
           </Text>
@@ -58,8 +56,6 @@ export default class ProfileScreen extends React.Component {
         </View>
         <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Certification</Text>
-          </View>
-          <View style={styles.cardInfo}>
           <Text style={styles.cardHeader}>
             Ateneo de Manila University
           </Text>
@@ -69,16 +65,11 @@ export default class ProfileScreen extends React.Component {
           <Text style={styles.cardText}>
             (2011)
           </Text>
-        </View>
-        <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Certification</Text>
-          </View>
-          <View style={styles.cardInfo}>
           <Text style={styles.cardHeader}>
-            Ateneo de Manila University
+            Lasalle University
           </Text>
           <Text style={styles.cardHeader2}>
-          Attended Some Workshops Sometimes
+          Maybe did workshops
           </Text>
           <Text style={styles.cardText}>
             (2011)
@@ -86,12 +77,11 @@ export default class ProfileScreen extends React.Component {
         </View>
         <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Availability</Text>
-          </View>
-          <View style={styles.cardInfo}>
           <Text style={styles.cardHeader}>
             As needed
           </Text>
         </View>
+        </ScrollView>
 </SafeAreaView>
   )};
 };
@@ -119,6 +109,18 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 5,
   },
+  card2: {
+    flex: 1,
+    height: "100%",
+    width: windowWidth,
+    marginVertical: 10,
+    flexDirection: "column",
+    shadowColor: "#999",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
+  },
   cardImgWrapper: {
     flex: 1,
   },
@@ -131,6 +133,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
   },
   cardInfo: {
+    width: windowWidth,
     flex: 2,
     padding: 10,
     borderColor: "#ccc",
@@ -138,6 +141,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderBottomRightRadius: 8,
     borderTopRightRadius: 8,
+    alignSelf:"flex-start",
+    flexWrap: "wrap",
     backgroundColor: "#fff",
   },
   cardTitle: {
@@ -149,6 +154,7 @@ const styles = StyleSheet.create({
     color: "#042B67",
   },
   cardHeader2: {
+    flexWrap: 'wrap',
     fontWeight: "500",
     color: "#042B67",
   },
@@ -159,5 +165,5 @@ const styles = StyleSheet.create({
   cardDetails: {
     fontSize: 12,
     color: "#444",
-  },
+  },  
 });
