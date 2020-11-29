@@ -19,15 +19,7 @@ export default class HomeScreen extends React.PureComponent {
 
   render() {
     return (
-      <View>
-        <SafeAreaView style={{ flex: 1 }}>
-          <TouchableOpacity
-            style={{ alignItems: "flex-start", margin: 16 }}
-            onPress={this.props.navigation.openDrawer}
-          >
-            <FontAwesome5 name="bars" size={24} color="#042B67" />
-          </TouchableOpacity>
-        </SafeAreaView>
+      <SafeAreaView>
         <View style={styles.cardsWrapper}>
           <Text
             style={{
@@ -70,7 +62,7 @@ export default class HomeScreen extends React.PureComponent {
             <Text style={{ fontSize: 22, lineHeight: 22 }}>120PHP</Text>
           </View>
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
